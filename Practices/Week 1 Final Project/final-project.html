@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week1 Final Project</title>
+  <style>
+    body {
+      background: #363636;
+      color: #F8F8F8;
+    }
+    button:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+    .my-div {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px 60px;
+    }
+    .more {
+      text-decoration: none;
+      color: #DC2F2F;
+      font-size: 18px;
+    }
+    .more:hover {
+      text-decoration: underline;
+    }
+
+
+    h1 {
+      text-align: center;
+      color: #DC2F2F;
+       
+    }
+    h2 {
+      text-align: center;
+      border: 1px solid #DC2F2F;
+      line-height: 50px;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 4px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border-radius: 30px;
+    }
+    p {
+      line-height: 1.5;
+      font-size: 15px;
+      margin: 0 0 10px;
+
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      background: #FF894C;
+      color: white;
+      font-size: 18px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      transition: all 200ms ease-in-out;
+    }
+    .footer {
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="my-div">
+  <h1>I love to do Yoga</h1>
+  <h2>It relaxes my mind</h2>
+  <img src = "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/905/original/fit-black-woman-practicing-yoga-sitting-with-legs-crossed-sportive-top-leggins-lotus-pose-practicing-calm-mind-harmony-no-stress-life-home-living-room_482257-16235.jpg?1696360421" />
+
+  <p>Yoga is a mind and body practice that can build strength and flexibility. It may also help manage pain and reduce stress. Various styles of yoga combine physical postures, breathing techniques, and meditation.</p>
+  <a href="https://www.medicalnewstoday.com/articles/286745" target="_blank" class="more">Find out more here</a>
+  <button>Book a Yoga session</button>
+  <p class="footer">This site was built by Umeh ijeoma</p>
+  </div>
+  <script>
+      function bookASesion() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let pose = prompt("What is your favourite Yoga pose?");
+
+        alert(
+          "Thank you" +" " + name + 
+          "! We'll be in touch by email,meanwhile check out some Yoga poses u did like!" + "🧘‍♀️");
+      }
+      let Button = document.querySelector("button");
+      Button.addEventListener("click", bookASesion);
+
+    </script>
+  
+</body>
+</html>
