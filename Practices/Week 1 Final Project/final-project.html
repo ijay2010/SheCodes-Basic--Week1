@@ -6,12 +6,8 @@
   <title>Week1 Final Project</title>
   <style>
     body {
-      background: #363636;
+      background: linear-gradient(90deg, rgb(54, 54, 54) 0%, rgb(139, 102, 241) 85%, rgb(139, 102, 241) 97%);
       color: #F8F8F8;
-    }
-    button:hover {
-      opacity: 0.9;
-      cursor: pointer;
     }
     .my-div {
       max-width: 600px;
@@ -25,12 +21,14 @@
     }
     .more:hover {
       text-decoration: underline;
+      color: #FF894C;
     }
 
 
     h1 {
       text-align: center;
       color: #DC2F2F;
+      font-weight: bold;
        
     }
     h2 {
@@ -65,8 +63,13 @@
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
       transition: all 200ms ease-in-out;
     }
+    button:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
     .footer {
       text-align: center;
+      font-weight: bold;
     }
 
   </style>
@@ -74,24 +77,30 @@
 <body>
   <div class="my-div">
   <h1>I love to do Yoga</h1>
-  <h2>It relaxes my mind</h2>
-  <img src = "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/905/original/fit-black-woman-practicing-yoga-sitting-with-legs-crossed-sportive-top-leggins-lotus-pose-practicing-calm-mind-harmony-no-stress-life-home-living-room_482257-16235.jpg?1696360421" />
+  <h2><em>It relaxes my mind</em></h2>
+  <br>
+  <img src = "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/905/original/fit-black-woman-practicing-yoga-sitting-with-legs-crossed-sportive-top-leggins-lotus-pose-practicing-calm-mind-harmony-no-stress-life-home-living-room_482257-16235.jpg?1696360421"  alt = "A black woman practicing Yoga"/><br>
+  <hr>
 
-  <p>Yoga is a mind and body practice that can build strength and flexibility. It may also help manage pain and reduce stress. Various styles of yoga combine physical postures, breathing techniques, and meditation.</p>
+  <p>Yoga is a <strong>mind and body</strong> practice that can build strength and flexibility. It may also help manage pain and reduce stress. Various styles of yoga combine physical postures, breathing techniques, and meditation.</p>
   <a href="https://www.medicalnewstoday.com/articles/286745" target="_blank" class="more">Find out more here</a>
   <button>Book a Yoga session</button>
-  <p class="footer">This site was built by Umeh ijeoma</p>
+  <hr>
+  <p class="footer"><span>This site was built by Umeh ijeoma</span></p>
   </div>
   <script>
       function bookASesion() {
         let name = prompt("What is your name?");
         let email = prompt("What is your email address?");
         let pose = prompt("What is your favourite Yoga pose?");
-
+        if (name.length >= 15 && email.length >= 20) {
         alert(
           "Thank you" +" " + name + 
           "! We'll be in touch by email,meanwhile check out some Yoga poses u did like!" + "🧘‍♀️");
+      } else{
+        alert ("Welcome!" + " " + name + "! We'll be in touch by email,meanwhile check out some Yoga poses u did like!" + "🧘‍♀️");
       }
+     } 
       let Button = document.querySelector("button");
       Button.addEventListener("click", bookASesion);
 
