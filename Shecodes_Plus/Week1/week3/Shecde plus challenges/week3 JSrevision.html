@@ -9,7 +9,8 @@
     <h1>JavaScript Revision</h1>
     <script>
         let FirstName = prompt("What is your first name?");
-        if(FirstName.length > 0) {
+        FirstName = FirstName.trim();
+        if(FirstName !== "") {
             alert("Welcome," + " " + FirstName + "!");
         }else{
             alert("Too bad for you!");
